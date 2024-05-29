@@ -40,11 +40,11 @@ function SiblingSelectors({ siblings, handleAddSibling, handleRemoveSibling, han
                     </div>
                     <div className="flex justify-end items-center">
                         {index === 0 ? (
-                            <button onClick={handleAddSibling} className="w-full flex justify-center border ring-2 ring-blue-500 text-dark font-bold py-3 px-4 rounded">
+                            <button type='button' onClick={handleAddSibling} className="w-full flex justify-center border ring-2 ring-blue-500 text-dark font-bold py-3 px-4 rounded">
                                 <FaPlus />
                             </button>
                         ) : (
-                            <button onClick={() => handleRemoveSibling(sibling.id)} className="w-full flex justify-center border ring-2 ring-red-500 text-dark font-bold py-3 px-4 rounded">
+                            <button type='button' onClick={() => handleRemoveSibling(sibling.id)} className="w-full flex justify-center border ring-2 ring-red-500 text-dark font-bold py-3 px-4 rounded">
                                 <FaMinus />
                             </button>
                         )}
