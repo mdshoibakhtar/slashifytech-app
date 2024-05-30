@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CustomInputField from './customInputField/CustomInputField';
 import CustomRadioButtons from './customRadiobuttns/CustomRadioButtons';
 import SiblingSelectors from './siblingSelector/SiblingSelector';
@@ -39,6 +39,9 @@ function Form() {
         window.localStorage.setItem('data', JSON.stringify(state));
         getData()
     };
+    useEffect(()=>{
+        getData()
+    },[])
 
     const handleInput = (e) => {
         const val = e.target.value
@@ -88,9 +91,6 @@ function Form() {
                 <h2 className='text-2xl text-center font-bold'>INFORMATIONS</h2>
                 <ListData data={getState} />
             </div>
-
-
-
         </>
     );
 }

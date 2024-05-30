@@ -16,16 +16,19 @@ function ListData({ data }) {
                     data?.siblingsName?.map((item) => {
                         console.log(item);
                         return <div className='border-b py-2'>
-                            <span>
-                                Gender : {item?.gender}
-                            </span>
+                            {item?.gender ? (
+                                <span>
+                                    Gender : {item?.gender}
+                                </span>
+                            ) : ""}
                             &nbsp;
                             &nbsp;
                             &nbsp;
                             &nbsp;
-                            <span>
-                                relationShipType : {item?.relationShipType}
-                            </span>
+                            {item?.relationShipType ? (<span>
+                                Relation : {item?.relationShipType}
+                            </span>) : ""}
+
                         </div>
                     })
 
